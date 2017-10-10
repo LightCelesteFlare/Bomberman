@@ -6,7 +6,7 @@ public class Bomberman : MonoBehaviour {
     public int Bomb;
     public int Fire;
     public int Speed;
-    public int maxfire, maxbomb, maxspeed;
+    public int maxfire = 10, maxbomb = 9, maxspeed = 4;
 
     bool facingRight = true;
     bool facingDown = true;
