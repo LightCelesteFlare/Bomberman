@@ -123,7 +123,10 @@ MonoBehaviour:
   maxfire: 10
   maxbomb: 9
   maxspeed: 4
+  Action: 0
+  Direction: 0
   Bombprefeb: {fileID: 0}
+  Anim: {fileID: 0}
 --- !u!212 &212687209941947072
 SpriteRenderer:
   m_ObjectHideFlags: 1

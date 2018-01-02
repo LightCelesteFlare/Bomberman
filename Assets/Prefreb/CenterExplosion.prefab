@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4762824630447082}
   - component: {fileID: 212302148532568368}
   - component: {fileID: 61770013565450898}
+  - component: {fileID: 95777249666926816}
   m_Layer: 0
   m_Name: CenterExplosion
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288129123853860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66, y: 1.42, z: 0}
+  m_LocalPosition: {x: -1.61, y: 0.61, z: 0}
   m_LocalScale: {x: 5.1, y: 5.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,6 +67,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!95 &95777249666926816
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288129123853860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57cbfdb254212e94bba562c645d95a35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212302148532568368
 SpriteRenderer:
   m_ObjectHideFlags: 1
