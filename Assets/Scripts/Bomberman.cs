@@ -30,22 +30,31 @@ public class Bomberman : MonoBehaviour {
         // Down
         if (Input.GetKey("s") || Action == 1)
         {
+            Action = 1;
             Anim.SetInteger("inputA", Action);
 
         }
         // Right
         if (Input.GetKey("d") || Action == 2)
         {
+            Action = 2;
+            Anim.SetInteger("inputA", Action);
+        }
+        if (Input.GetKey("a") || Action == 3)
+        {
+            Action = 3;
             Anim.SetInteger("inputA", Action);
         }
         //Death
         if (Action == 9)
         {
+            Action = 9;
             Anim.SetInteger("inputA", Action);
         }
         // Idle
         if (Action == 0)
         {
+            Action = 0;
             Anim.SetInteger("inputA", Action);
         }
 
