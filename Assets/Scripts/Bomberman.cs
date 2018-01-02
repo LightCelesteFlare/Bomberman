@@ -32,6 +32,7 @@ public class Bomberman : MonoBehaviour {
         {
             Action = 1;
             Anim.SetInteger("inputA", Action);
+            Anim.SetBool("inputFlip", false);
 
         }
         // Right
@@ -39,11 +40,13 @@ public class Bomberman : MonoBehaviour {
         {
             Action = 2;
             Anim.SetInteger("inputA", Action);
+            Anim.SetBool("inputFlip", false);
         }
         if (Input.GetKey("a") || Action == 3)
         {
             Action = 3;
             Anim.SetInteger("inputA", Action);
+            Anim.SetBool("inputFlip", true);
         }
         //Death
         if (Action == 9)
@@ -57,16 +60,10 @@ public class Bomberman : MonoBehaviour {
             Action = 0;
             Anim.SetInteger("inputA", Action);
         }
-
+        if (Input.GetKeyDown("space"))
+        {
+            Instantiate(Bombprefeb, this.gameObject.transform.position, Quaternion.identity);
+        }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-            if (Input.GetKeyDown("space"))
-            {
-                Instantiate(Bombprefeb, this.gameObject.transform.position, Quaternion.identity);
-            }
-            //= new Vector3(other.transform.position.x, other.transform.position.y, 0f)
-    }
-
+    
 }

@@ -248,7 +248,7 @@ Prefab:
     - target: {fileID: 50336050540071244, guid: c51fb199896ee6345b22a4cc8695dffd,
         type: 2}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114174055248148840, guid: c51fb199896ee6345b22a4cc8695dffd,
         type: 2}
@@ -265,6 +265,12 @@ Prefab:
       propertyPath: Anim
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114174055248148840, guid: c51fb199896ee6345b22a4cc8695dffd,
+        type: 2}
+      propertyPath: Bombprefeb
+      value: 
+      objectReference: {fileID: 1542733607652360, guid: 0c546f39348dadb4bbcf92895e592c19,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c51fb199896ee6345b22a4cc8695dffd, type: 2}
   m_IsPrefabParent: 0

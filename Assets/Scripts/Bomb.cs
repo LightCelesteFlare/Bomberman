@@ -62,6 +62,5 @@ public class Bomb : MonoBehaviour {
     {
         other.isTrigger = false;
     }
-
-
+    
 }
