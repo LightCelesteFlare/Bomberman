@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212633004941998020}
   - component: {fileID: 95169591226747340}
   - component: {fileID: 61406026288085326}
-  - component: {fileID: 114256331099258042}
+  - component: {fileID: 114459134843518298}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542733607652360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.056, y: 3.83, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,7 +85,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114256331099258042
+--- !u!114 &114459134843518298
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfaf03567b6de248badf832b434ac3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDuration: 2
+  explosionPrefab: {fileID: 1288129123853860, guid: 001b554e41ba911409a37aa7e2c87572,
+    type: 2}
+  Bombprefeb: {fileID: 1542733607652360}
+  explodeDelay: 5
+  exploded: 0
+  explosionDuration: 1
 --- !u!212 &212633004941998020
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -128,7 +133,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300010, guid: 76a42e47ed325364197c934c96b42ea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

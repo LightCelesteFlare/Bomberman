@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212302148532568368}
   - component: {fileID: 61770013565450898}
   - component: {fileID: 95777249666926816}
+  - component: {fileID: 114229201932150874}
   m_Layer: 0
   m_Name: CenterExplosion
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1288129123853860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.61, y: 0.61, z: 0}
-  m_LocalScale: {x: 5.1, y: 5.1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,6 +85,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114229201932150874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288129123853860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfaf03567b6de248badf832b434ac3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1288129123853860}
+  Bombprefeb: {fileID: 1288129123853860}
+  explodeDelay: 5
+  exploded: 0
+  explosionDuration: 0
 --- !u!212 &212302148532568368
 SpriteRenderer:
   m_ObjectHideFlags: 1
