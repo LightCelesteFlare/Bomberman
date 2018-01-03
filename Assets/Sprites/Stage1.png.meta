@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 76a42e47ed325364197c934c96b42ea3
-timeCreated: 1514868376
+timeCreated: 1514964663
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -76,7 +76,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 6
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -164,9 +164,9 @@ TextureImporter:
       name: Stage1_3
       rect:
         serializedVersion: 2
-        x: 54
+        x: 53
         y: 121
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

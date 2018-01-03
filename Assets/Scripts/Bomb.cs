@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Bomb : MonoBehaviour {
 
-    private GameObject explosionPrefab;
-
+    public GameObject explosionPrefab;
+    public GameObject Bombprefeb;
+    public float explodeDelay = 5f;
+    public bool exploded = false;
     [SerializeField]
-    private float explosionDuration;
+    private float explosionDuration = 1f;
 
     private int explosionRange;
 
@@ -62,5 +65,42 @@ public class Bomb : MonoBehaviour {
     {
         other.isTrigger = false;
     }
-    
+
+    private void Update()
+    {
+        Vector3 explosionPosition = Bombprefeb.transform.position;
+        if (explodeDelay <= 0)
+        {
+            exploded = true;
+        }
+        explodeDelay -= Time.deltaTime;
+    }
+    private void FixedUpdate()
+    {
+        Vector3 explosionPosition = Bombprefeb.transform.position;
+        if (explodeDelay <= 0)
+        {
+
+                Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
+                Object.Destroy(gameObject);
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Vector3 explosionPosition = Bombprefeb.transform.position;
+        Vector3 target = other.gameObject.transform.position;
+
+        if (exploded == true)
+        {
+            if (other.gameObject.GetComponent<Rigidbody2D>() != null)
+            {
+                Explode();
+            }
+        }
+    }
+
+
+
 }
