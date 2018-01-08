@@ -112,7 +112,7 @@ public class Bomberman : MonoBehaviour {
         // Bombs
         if (Input.GetKeyDown("space"))
         {
-
+				
                 Instantiate(Bombprefeb, this.gameObject.transform.position, Quaternion.identity);                  
         }
 

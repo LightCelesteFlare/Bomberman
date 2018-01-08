@@ -11,9 +11,11 @@ public class Bomb : MonoBehaviour {
     public bool exploded = false;
     [SerializeField]
     private float explosionDuration = 1f;
-
     private int explosionRange;
 
+	public float grid = 0.5f;
+
+	public float x = 0f, y = 0f;
     private void CreateExplosions(Vector2 direction)
     {
         ContactFilter2D contactFilter = new ContactFilter2D();
@@ -74,13 +76,20 @@ public class Bomb : MonoBehaviour {
             exploded = true;
         }
         explodeDelay -= Time.deltaTime;
-    }
+
+		float RGrid = 1f / grid;
+
+		x = Mathf.Round(transform.position.x * RGrid) / RGrid;
+		y = Mathf.Round(transform.position.y * RGrid) / RGrid;
+
+		transform.position = new Vector3(x, y, transform.position.z);
+	}
     private void FixedUpdate()
     {
         Vector3 explosionPosition = Bombprefeb.transform.position;
         if (explodeDelay <= 0)
         {
-
+			
                 Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Object.Destroy(gameObject);
 
